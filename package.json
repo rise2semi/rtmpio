@@ -1,0 +1,16 @@
+{
+  "name": "rtmpio",
+  "description": "Real Time Messaging Protocol API",
+  "version": "0.0.1",
+  "author": {
+    "name": "Borys Semerenko",
+    "email": "rise2semi@gmail.com"
+  },
+  "keywords": [
+    "rtmp",
+    "parser",
+    "media",
+    "api"
+  ],
+  "main": "./lib/rtmpio"
+}
