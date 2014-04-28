@@ -13,13 +13,13 @@ server.on('connection', function( connection ) {
         handshake.sendVersion();
     });
 
-    handshake.on('one', function( chunk ) {
+    handshake.on('first', function( chunk ) {
         console.log( 'Random data: ' + chunk.randomData.toString('base64') );
 
         handshake.sendData();
     });
 
-    handshake.on('two', function( chunk ) {
+    handshake.on('second', function( chunk ) {
         console.log( 'Random response data: ' + chunk.randomData.toString('base64') );
 
         handshake.sendAcknowledge( chunk.randomData );
