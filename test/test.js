@@ -14,13 +14,13 @@ server.on('connection', function( connection ) {
     });
 
     handshake.on('first', function( chunk ) {
-        console.log( 'Random data: ' + chunk.randomData.toString('base64') );
+        console.log( 'Random data: ' + chunk.randomData );
 
         handshake.sendData();
     });
 
     handshake.on('second', function( chunk ) {
-        console.log( 'Random response data: ' + chunk.randomData.toString('base64') );
+        console.log( 'Random response data: ' + chunk.randomData );
 
         handshake.sendAcknowledge( chunk.randomData );
     });
@@ -40,5 +40,5 @@ server.on('connection', function( connection ) {
 });
 
 server.listen( 1935, function() {
-  console.log('server listened');
+    console.log('server listened');
 });
